@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -15,7 +14,6 @@ import { ShopPromPage } from './components/pages/ShopPromPage';
 function App() {
   return (
     <Router>
-      <Navbar />
       <Switch>
         <Route exact path="/">
           <IKEAHomepage />
