@@ -1,24 +1,42 @@
 import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import { IKEAHomepage } from './components/pages/IKEAHomepage';
+import { LoginPage } from './components/pages/LoginPage';
+import { ProductDetailsPage } from './components/pages/ProductDetailsPage';
+import { SearchResultPage } from './components/pages/SearchResultPage';
+import { ShoppingCartPage } from './components/pages/ShoppingCartPage';
+import { ShopPromPage } from './components/pages/ShopPromPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route exact path="/">
+          <IKEAHomepage />
+        </Route>
+        <Route path="/shop/promotion">
+           <ShopPromPage />
+        </Route>
+        <Route path="/products/:id">
+          <ProductDetailsPage />
+        </Route>
+        <Route path="/cart">
+           <ShoppingCartPage />
+        </Route>
+        <Route path="/search">
+          <SearchResultPage />
+        </Route>
+        <Route path="/login">
+          <LoginPage />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
