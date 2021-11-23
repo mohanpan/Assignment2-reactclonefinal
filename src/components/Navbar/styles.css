@@ -1,0 +1,17 @@
+div.navigation{
+    background: #3123b3;
+    vertical-align: left;
+    column-count: 1;
+}
+
+button{
+    color: rgb(255, 255, 255);
+    border: none;
+    background: #3123b3;
+    size: 10dp;
+
+}
+
+.button:hover {
+    opacity: 40%;
+  }

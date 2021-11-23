@@ -11,12 +11,14 @@ import { ProductDetailsPage } from './components/pages/ProductDetailsPage';
 import { SearchResultPage } from './components/pages/SearchResultPage';
 import { ShoppingCartPage } from './components/pages/ShoppingCartPage';
 import { ShopPromPage } from './components/pages/ShopPromPage';
+import { Navbar } from './components/Navbar/Navbar';
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route exact path="/">
+          <Navbar />
           <IKEAHomepage />
         </Route>
         <Route path="/shop/promotion">
